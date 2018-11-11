@@ -19,9 +19,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Init everything
         initialize();
 
         ImageView image = (ImageView) findViewById(R.id.img_coin);
+
         image.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 ImageView image = (ImageView) findViewById(R.id.img_coin);
