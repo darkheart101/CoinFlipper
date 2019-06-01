@@ -37,12 +37,12 @@ public class MainActivity extends AppCompatActivity {
                 double tailsOrHead = flipTheCoin();
 
                 String msg = "";
-                if( (int)tailsOrHead == CoinSide.HEAD ) {
+                if( (int)tailsOrHead == coin.HEAD ) {
                     image.setImageResource(imageHeadResource);
                     msg = "Κορώνα!";
                 }
 
-                if( (int)tailsOrHead == CoinSide.TAILS ) {
+                if( (int)tailsOrHead == coin.TAILS ) {
                     image.setImageResource(imageTailsResource);
                     msg = "Γράμματα!";
                 }
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void initialize(Coin coin){
+    private void initialize(CoinInterface coin){
         int imageResource;
         displayMessage("Πατήστε το νόμισμα για να γυρίσει...");
         imageResource = coin.get_HeadImageSizeResource();

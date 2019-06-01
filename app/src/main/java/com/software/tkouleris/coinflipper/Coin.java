@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.res.Configuration;
 
 
-public class Coin {
+public class Coin implements CoinInterface {
 
     private Context context;
     private int screenSize = 0;
+    public static final int HEAD = 1;
+    public static final int TAILS = 2;
 
     public Coin(Context current){
 
