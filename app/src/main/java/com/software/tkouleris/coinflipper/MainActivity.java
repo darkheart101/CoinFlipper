@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         // Init everything
         initialize();
 
-        ImageView image = (ImageView) findViewById(R.id.img_coin);
+        final ImageView image = findViewById(R.id.img_coin);
 
         image.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                ImageView image = (ImageView) findViewById(R.id.img_coin);
+
                 flipTheCoin(image);
             }
         });
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         screenSize = getScreenSize();
         imageResource = get_HeadImageSizeResource(screenSize);
 
-        ImageView image = (ImageView) findViewById(R.id.img_coin);
+        ImageView image = findViewById(R.id.img_coin);
         image.setImageResource(imageResource);
     }
 
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         View view = toast.getView();
         view.setBackgroundColor(Color.BLACK);
 
-        TextView txtMsg = (TextView) toast.getView().findViewById(android.R.id.message);
+        TextView txtMsg = toast.getView().findViewById(android.R.id.message);
         txtMsg.setTextColor(Color.WHITE);
 
         toast.show();
